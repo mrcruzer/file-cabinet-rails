@@ -1,0 +1,13 @@
+<header>
+    <div class="header_inner">
+        <%= link_to "CabinetRails", root_path, id: "logo"%>
+        <nav>
+          <% if user_signed_in? %>
+            <%= link_to "Crear Documento", new_doc_path %>
+            <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Inicia Sesion", new_user_session_path %>
+          <% end %>
+        </nav>
+    </div>
+</header>

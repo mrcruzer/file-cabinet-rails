@@ -1,0 +1,23 @@
+<div class="wrapper_with_padding">
+    <div id="docs.clearfix">
+        <% unless @docs.blank? %>
+            <% @docs.each do |docs| %>
+            <a href="<%= url_for([docs]) %>">
+            <div id="docs">
+                <div class="doc">
+                    <h1 class="title"><%= docs.title %></h1>
+                    <p class="date"><%= time_ago_in_words(docs.created_at) %></p>
+                    <p class="content"><%= truncate(docs.content, length: 50) %></p>
+                </div>
+            </div>
+            <% end %>
+        <% else %>
+            <h2>Crear Documento</h2>
+            <p>Comienza Creando Documentos Y Organizate</p>
+            <%= link_to "<button>Crear Documento</button>".html_safe, new_docs_path %>
+        <% end %>
+        
+    </div>
+</div>
+
+

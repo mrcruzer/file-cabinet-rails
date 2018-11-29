@@ -1,0 +1,11 @@
+<div class="wrapper_with_padding">
+    <div id="doc_show">
+        <h1 class="title"><%= @doc.title %></h1>
+        <p class="content"><%= @doc.content %><p>
+
+        <div class="buttons">
+            <%= link_to "Editar", edit_doc_path(@doc), class: "button" %>
+            <%= link_to "Borrar", doc_path(@doc), method: :delete, data: { confirm: "Estas Seguro" }, class: "button" %>
+        </div>
+    </div>
+</div>
