@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Copy Of File Cabinet
 
-Things you may want to cover:
+Run rails db:seed
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Create this user => user = User.create! :email => 'admin@admin.com', :password => 'admin1234', :password_confirmation => 'admin1234'
